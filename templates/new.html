@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+    {% block b %}
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10">
+                
+                <div class="card border-0 shadow-sm">
+                    <div class="card-header bg-primary text-white p-3">
+                        <h4 class="mb-0 fs-5">📝 Register New School</h4>
+                    </div>
+                    
+                    <div class="card-body p-4">
+                        <form method="post" action="/addschool">
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="schoolName" class="form-label">School Name <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="schoolName"name="Sname" placeholder="e.g. Kendriya Vidyalaya No.1" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="udiseCode" class="form-label">UDISE Code <span class="text-danger">*</span></label>
+                                    <input type="text" class="form-control" id="udiseCode" name="Sid" placeholder="11-digit UDISE Code" required>
+                                    <div class="form-text">This will be your School Login ID.</div>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="schoolEmail" class="form-label">Official Email Address <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="schoolEmail" name="email" placeholder="principal@school.edu.in" required>
+                            </div>
+
+                            <div class="row mb-3">
+                                <div class="col-md-6">
+                                    <label for="pass1" class="form-label">Create Password <span class="text-danger">*</span></label>
+                                    <input type="password" class="form-control" id="pass1" name="password" required>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="pass2" class="form-label">Confirm Password <span class="text-danger">*</span></label>
+                                    <input type="password" class="form-control" id="pass2" name="cpassword" required>
+                                </div>
+                            </div>
+
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" name="check" required>
+                                <label class="form-check-label" for="flexCheckDefault">
+                                    I certify that I am an authorized representative of this school.
+                                </label>
+                            </div>
+
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">Create School Account</button>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="card-footer text-center py-3 bg-light">
+                        <p class="mb-0">Already have an account? <a href="\" class="fw-bold text-decoration-none">Login Here</a></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    {% endblock b %}
+    

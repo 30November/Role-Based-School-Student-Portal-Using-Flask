@@ -1,0 +1,16 @@
+First 2 digits: State Code (e.g., 09 for Uttar Pradesh)
+
+Next 2 digits: District Code
+
+Next 2 digits: Block Code
+
+Next 3 digits: Village/Ward Code
+
+Last 2 digits: School Sequence Number
+
+
+{% extends "base.html" %}
+
+{% block b %}
+<h1> Work In Progress!!!</h1>
+{% endblock b %}

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> XYZ </title>
+    <link href="https://cdn.ux4g.gov.in/UX4G@2.0.8/css/ux4g-min.css" rel="stylesheet">
+    
+    <style>
+        body {
+            background-color: #f4f6f9;
+        }
+        .login-card {
+            max-width: 500px;
+            margin: 50px auto;
+            border: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            background: #fff;
+        }
+        .nav-tabs .nav-link {
+            width: 50%;
+            text-align: center;
+            font-weight: 600;
+            color: #6c757d;
+        }
+        .nav-tabs .nav-link.active {
+            color: #0d6efd; /* Standard Primary Color */
+            border-bottom: 3px solid #0d6efd;
+        }
+        .header-brand {
+            background-color: #ffffff;
+            padding: 15px 0;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+    </style>
+</head>
+{ % block b %}
+<body>
+
+    <div class="header-brand">
+        <div class="container">
+            <h3 class="m-0 text-primary">🎓 School Portal</h3>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="card login-card">
+            
+            <ul class="nav nav-tabs" id="loginTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active d-flex" id="school-tab" data-bs-toggle="tab" data-bs-target="#school-pane" type="button" role="tab" aria-controls="school-pane" aria-selected="true">
+                        🏫 School Login
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link d-flex" id="student-tab" data-bs-toggle="tab" data-bs-target="#student-pane" type="button" role="tab" aria-controls="student-pane" aria-selected="false">
+                        👨‍🎓 Student Login
+                    </button>
+                </li>
+            </ul>
+
+            <div class="card-body p-4">
+                <div class="tab-content" id="loginTabContent">
+                    
+                    <div class="tab-pane fade show active" id="school-pane" role="tabpanel" aria-labelledby="school-tab">
+                        <h4 class="mb-3">School Access</h4>
+                        <p class="text-muted small">Enter your School UDISE Code or Admin ID.</p>
+                        
+                        <form>
+                            <div class="mb-3">
+                                <label for="schoolId" class="form-label">School ID / UDISE Code</label>
+                                <input type="text" class="form-control" id="schoolId" placeholder="e.g. SCH-123456" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="schoolPass" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="schoolPass" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Login as School</button>
+                            <div class="mt-3 text-center">
+                                <a href="/newschool" class="small text-decoration-none">Register New School</a>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="tab-pane fade" id="student-pane" role="tabpanel" aria-labelledby="student-tab">
+                        <h4 class="mb-3">Student Portal</h4>
+                        <p class="text-muted small">Login with your Roll Number or Student ID.</p>
+                        
+                        <form>
+                            <div class="mb-3">
+                                <label for="studentId" class="form-label">Student ID</label>
+                                <input type="text" class="form-control" id="studentId" placeholder="e.g. STU-2024-001" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="studentPass" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="studentPass" required>
+                            </div>
+                            <button type="submit" class="btn btn-success w-100">Login as Student</button>
+                            <div class="mt-3 text-center">
+                                <a href="#" class="small text-decoration-none">Forgot Password?</a>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.ux4g.gov.in/UX4G@2.0.8/js/ux4g.min.js"></script>
+</body>
+{ % endblock b %}
+</html>
